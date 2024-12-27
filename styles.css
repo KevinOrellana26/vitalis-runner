@@ -121,7 +121,7 @@ main {
 }
 
 .text-block a:hover {
-    color: #fc4c69; /* Color al pasar el ratón */
+    color: #b3374c; /* Color al pasar el ratón */
     /* transform: scale(1.05); /* Efecto de escalado */
     /*transition: transform 0.3s ease; Transición suave del efecto */
 }
