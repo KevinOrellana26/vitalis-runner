@@ -337,3 +337,34 @@ main {
 
 /******************************************************************/
 /* PÁGINAS ZAPATILLAS */
+
+
+
+
+
+/******************************************************************/
+/* PÁGINAS SUGERENCIAS */
+.container {
+  display: flex; /* Flexbox para organizar en filas */
+  flex-direction: row; /* Elementos en una fila (horizontal) */
+  justify-content: space-between; /* Espacio entre el gráfico y el mensaje */
+  align-items: center; /* Alinea verticalmente al centro */
+  padding: 20px; /* Añade algo de espacio interno */
+}
+
+.grafico {
+  flex: 1; /* Ocupa el espacio disponible a la izquierda */
+  max-width: 60%; /* Limita el ancho máximo del gráfico */
+}
+
+.mensaje {
+  flex: 1; /* Ocupa el espacio disponible a la derecha */
+  max-width: 40%; /* Limita el ancho máximo del mensaje */
+  text-align: center; /* Centra el texto dentro del div */
+}
+
+.mensaje h1 {
+  font-size: 2em; /* Ajusta el tamaño del texto */
+  color: #333; /* Color del texto */
+  margin: 0; /* Quita márgenes alrededor del título */
+}

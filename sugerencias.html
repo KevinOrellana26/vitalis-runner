@@ -27,9 +27,21 @@
           <li>
             <a href="#">Zapatillas</a>
             <ul>
-              <li><a href="zapatillas/zap-comp.html" target="_blank">Competición</a></li>
-              <li><a href="zapatillas/zap-trail.html" target="_blank">Trail Running</a></li>
-              <li><a href="zapatillas/zap-entre.html" target="_blank">Entrenamiento</a></li>
+              <li>
+                <a href="zapatillas/zap-comp.html" target="_blank"
+                  >Competición</a
+                >
+              </li>
+              <li>
+                <a href="zapatillas/zap-trail.html" target="_blank"
+                  >Trail Running</a
+                >
+              </li>
+              <li>
+                <a href="zapatillas/zap-entre.html" target="_blank"
+                  >Entrenamiento</a
+                >
+              </li>
             </ul>
           </li>
           <li><a href="sugerencias.html">Sugerencias</a></li>
@@ -37,7 +49,79 @@
         </ul>
       </nav>
     </header>
-    <h1>Sugerencias</h1>
+
+    <div class="container">
+      <div class="grafico">
+        <canvas id="myChart" width="300" height="100%"></canvas>
+      </div>
+      <div class="mensaje">
+        <h1>Todo gracias a ti.</h1>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const plugin = {
+        id: "customCanvasBackgroundColor",
+        beforeDraw: (chart, args, options) => {
+          const { ctx } = chart;
+          ctx.save();
+          ctx.globalCompositeOperation = "destination-over";
+          ctx.fillStyle = options.color || "#faf5f1";
+          ctx.fillRect(0, 0, chart.width, chart.height);
+          ctx.restore();
+        },
+      };
+
+      const ctx = document.getElementById("myChart");
+
+      Chart.defaults.font.size = 17;
+      Chart.defaults.font.family = "sans-serif";
+      Chart.defaults.font.style = "italic";
+
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Bélgica", "Alemania", "Italia", "Francia", "España"],
+          datasets: [
+            {
+              label: "Ventas 2023 (miles)",
+              data: [30, 50, 123, 234, 860],
+              borderColor: "#fc4c69",
+              backgroundColor: "#ff8c94",
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                stepSize: 200, // Incrementos de 200
+                max: 1000, // Máximo del eje Y
+              },
+            },
+          },
+          plugins: {
+            customCanvasBackgroundColor: {
+              color: "#faf5f1",
+            },
+            title: {
+              display: true,
+              text: "Ventas por paises",
+            },
+            subtitle: {
+              display: true,
+              text: "Líderes Nacionales y referentes en Europa",
+              color: "#fc4c69",
+            },
+          },
+        },
+        plugins: [plugin],
+      });
+    </script>
 
     <!-- Footer -->
     <footer class="footer">
