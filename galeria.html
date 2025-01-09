@@ -9,8 +9,13 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <!-- CSS de Swiper desde CDN (Content Delivery Network) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
-  <body>
+  <body class="galeria">
     <!-- Cabecera -->
     <header>
       <!-- Logo -->
@@ -27,9 +32,21 @@
           <li>
             <a href="#">Zapatillas</a>
             <ul>
-              <li><a href="zapatillas/zap-comp.html" target="_blank">Competición</a></li>
-              <li><a href="zapatillas/zap-trail.html" target="_blank">Trail Running</a></li>
-              <li><a href="zapatillas/zap-entre.html" target="_blank">Entrenamiento</a></li>
+              <li>
+                <a href="zapatillas/zap-comp.html" target="_blank"
+                  >Competición</a
+                >
+              </li>
+              <li>
+                <a href="zapatillas/zap-trail.html" target="_blank"
+                  >Trail Running</a
+                >
+              </li>
+              <li>
+                <a href="zapatillas/zap-entre.html" target="_blank"
+                  >Entrenamiento</a
+                >
+              </li>
             </ul>
           </li>
           <li><a href="sugerencias.html">Sugerencias</a></li>
@@ -37,7 +54,58 @@
         </ul>
       </nav>
     </header>
-    <h1>Galeria</h1>
+
+    <!-- Main -->
+    <!-- Contenedor Swiper -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Diapositivas con imágenes -->
+        <div class="swiper-slide">
+          <img src="img/galeria/anatomia-zapatilla.png" alt="Slide 1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/galeria/run.png" alt="Slide 2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/galeria/zapatilla.png" alt="Slide 3" />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://via.placeholder.com/600x400?text=Slide+4"
+            alt="Slide 4"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://via.placeholder.com/600x400?text=Slide+5"
+            alt="Slide 5"
+          />
+        </div>
+      </div>
+      <!-- Botones de navegación -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- Paginación -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <section class="msj-and-video">
+      <div class="video">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/gImHug3sGKI?si=6dZG9TKCDw1HOtJi&amp;controls=1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="mensaje">
+        <h2>Sigue estos consejos para empezar a correr</h2>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -61,5 +129,42 @@
         <p>&copy; 2024 Vitalis Runner. Todos los derechos reservados.</p>
       </div>
     </footer>
+
+    <!-- JS de Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper-container", {
+        slidesPerView: 3 /* Muestra 3 imagen al mismo tiempo */,
+        spaceBetween: 60 /* Espacio en px entre diapositivas */,
+        loop: false /* Hace que el slider no sea infinito */,
+        speed: 1200 /*duración en segundos de transición entre imagen, en ms*/,
+        effect: "coverflow", //Efecto visual
+        coverflowEffect: {
+          //ajusta el comportamiento del efecto
+          rotate: 0,
+          stretch: 0,
+          depth: 5,
+          modifier: 2.5,
+        },
+        //configuración del efecto spring
+        mousewheel: true, //permite controlar el slider con la rueda del ratón
+        grabCursor: true, //cambia el cursor a un estilo "mano" al interactuar con la imagen
+        navigation: {
+          //conf botones de navegación
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          //conf paginación
+          el: ".swiper-pagination",
+          clickable: true, //permite que los indicadores (bullets) sean interactivos
+        },
+        //conf el comportamiento del rebote al deslizar
+        touchRatio: 2,
+        touchAngle: 45,
+        resistance: true,
+        resistanceRatio: 0.65,
+      });
+    </script>
   </body>
 </html>
