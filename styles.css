@@ -331,7 +331,8 @@ main {
 /******************************************************************/
 /* PÁGINA GALERIAS */
 
-.swiper-container { /*Define el tamaño y estilo general del contenedor principal*/
+.swiper-container {
+  /*Define el tamaño y estilo general del contenedor principal*/
   width: 90%;
   max-width: 90%;
   padding: 40px;
@@ -339,21 +340,24 @@ main {
   overflow: hidden;
 }
 
-.swiper-slide { /*Estilo de las imagenes. Usamos flex para centrar el contenido*/
+.swiper-slide {
+  /*Estilo de las imagenes. Usamos flex para centrar el contenido*/
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
 
-.swiper-slide img { /*Las img de las diapositivas se ajustan al tamaño del contenedor, manteniendo proporciones*/
+.swiper-slide img {
+  /*Las img de las diapositivas se ajustan al tamaño del contenedor, manteniendo proporciones*/
   width: 100%;
   height: 500px;
   object-fit: cover;
 }
 
 .swiper-button-next,
-.swiper-button-prev { /*Personaliza los botones de navegación*/
+.swiper-button-prev {
+  /*Personaliza los botones de navegación*/
   color: #fc4c69;
   width: 40px;
   height: 40px;
@@ -361,7 +365,8 @@ main {
 }
 
 .swiper-button-next:after,
-.swiper-button-prev:after { /**/
+.swiper-button-prev:after {
+  /**/
   font-size: 20px;
   color: #fc4c69;
 }
@@ -374,7 +379,7 @@ main {
   background-color: #fc4c69; /* Color del bullet activo */
 }
 
-.msj-and-video{
+.msj-and-video {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -401,11 +406,10 @@ main {
   display: flex; /*se neceita para alinear el mensaje*/
   justify-content: center; /*Alinea el mensaje a la derecha*/
   align-items: center;
-  text-align: center; 
+  text-align: center;
   margin-right: 50px;
   margin-left: 20px;
 }
-
 
 /******************************************************************/
 /* PÁGINAS ZAPATILLAS */
@@ -435,4 +439,93 @@ main {
   font-size: 2em; /* Ajusta el tamaño del texto */
   color: #333; /* Color del texto */
   margin: 0; /* Quita márgenes alrededor del título */
+}
+
+/******************************************************************/
+/* PÁGINA CONTACTO */
+
+.contacto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 50px;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+.form {
+  flex: 1;
+  width: 800px;
+  margin: 20px auto;
+  background-color: #f7f7f7;
+  padding: 20px; /* Espacio alrededor del contenido del formulario */
+  border-radius: 10px; /* Bordes redondeados opcionales */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un efecto más limpio */
+}
+
+label {
+  display: block; /* Etiquetas en bloque para alineación adecuada */
+  margin-bottom: 5px; /* Espaciado entre la etiqueta y el campo */
+  font-weight: bold;
+}
+
+.text,
+textarea,
+select {
+  width: 100%;
+  padding: 10px; /* Espaciado interno */
+  margin-bottom: 5px; /* Espaciado entre campos */
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row; /* checkboxes en una sola linea*/
+  gap: 10px; /* Espacio entre checkboxes */
+}
+
+.checkbox label {
+  display: flex;
+  align-items: center; /* Alinea el checkbox con el texto */
+  gap: 10px; /* Espacio entre el checkbox y el texto */
+}
+
+.botones {
+  text-align: center;
+}
+
+.bEnviar {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px; /* Espaciado entre botones */
+}
+
+.bEnviar:hover {
+  background-color: #45a049;
+}
+
+.bBorrar {
+  background-color: #dd3838;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px; /* Espaciado entre botones */
+}
+
+.bBorrar:hover {
+  background-color: #cc1d1d;
+}
+
+.maps {
+  flex: 1;
+  max-width: 600px;
 }

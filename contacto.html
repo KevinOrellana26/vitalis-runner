@@ -27,9 +27,21 @@
           <li>
             <a href="#">Zapatillas</a>
             <ul>
-              <li><a href="zapatillas/zap-comp.html" target="_blank">Competición</a></li>
-              <li><a href="zapatillas/zap-trail.html" target="_blank">Trail Running</a></li>
-              <li><a href="zapatillas/zap-entre.html" target="_blank">Entrenamiento</a></li>
+              <li>
+                <a href="zapatillas/zap-comp.html" target="_blank"
+                  >Competición</a
+                >
+              </li>
+              <li>
+                <a href="zapatillas/zap-trail.html" target="_blank"
+                  >Trail Running</a
+                >
+              </li>
+              <li>
+                <a href="zapatillas/zap-entre.html" target="_blank"
+                  >Entrenamiento</a
+                >
+              </li>
             </ul>
           </li>
           <li><a href="sugerencias.html">Sugerencias</a></li>
@@ -37,7 +49,56 @@
         </ul>
       </nav>
     </header>
-    <h1>Contacto</h1>
+    <div class="contacto">
+      <div class="form">
+        <form action="">
+          <label>Nombre:</label>
+          <input class="text" type="text" name="nombre" size="90" placeholder="Escribe tu nombre"><br><br>
+
+          <label>Correo Electrónico:</label>
+          <input class="text" type="text" name="correo" size="90" placeholder="tuemail@example.com"><br><br>
+
+          <label>Tipo de Zapatilla Preferida:</label>
+          <select name="zapatilla">
+            <option value="D">Selecciona una opción</option>
+            <option value="C">Competición</option>
+            <option value="T">Trail Running</option>
+            <option value="E">Entrenamiento</option>
+          </select><br /><br />
+
+          <label>Preferencia de contenido :</label><br><br>
+          <div class="checkbox">
+            <label>
+              <input class="text" type="checkbox" name="competicicion" value="competicicion">
+              Sugerencias
+            </label>
+            <label>
+              <input class="text" type="checkbox" name="trail" value="trail">
+              Videos
+            </label>
+            <label>
+              <input class="text" type="checkbox" name="entrenamiento" value="entrenamiento">
+              Fotos
+            </label>
+          </div><br><br>
+
+          <label>Edad:</label>
+          <input class="text" type="text" name="edad" size="90" placeholder="Escribe tu edad"/><br /><br />
+
+          <label>Comentarios o Sugerencias</label>
+          <textarea id="texto" rows="6" cols="70" placeholder="Escribe tus comentarios o sugerencias aquí..."></textarea><br /><br />
+
+          <div class="botones">
+            <input class="bEnviar" type="submit" value="Enviar los datos" />
+            <input class="bBorrar" type="button" id="limpiar" value="Borrar datos" />
+          </div>
+        </form>
+      </div>
+      <div class="maps">
+        <p>Encuentranos aquí</p><br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d547.9440974511843!2d-0.37421456296659694!3d39.47362161558616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1736522005692!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
