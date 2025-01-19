@@ -191,6 +191,7 @@ main {
 }
 
 /* FOOTER */
+<<<<<<< HEAD
 html, body {
   height: 100%; /* Asegura que el contenido ocupe toda la altura del viewport */
   margin: 0;
@@ -202,12 +203,17 @@ body {
   min-height: 100%; /* Para garantizar que el contenido ocupe el 100% de la altura */
 }
 
+=======
+>>>>>>> 2aa5951190e9ccd5587ef8a0c07e4ce661794e71
 .footer {
   background: linear-gradient(to top, rgb(255, 151, 151), #ffffff);
   color: #333333;
   padding: 20px;
   text-align: center;
+<<<<<<< HEAD
   margin-top: auto; /* Empuja el footer hacia el fondo si hay espacio libre */
+=======
+>>>>>>> 2aa5951190e9ccd5587ef8a0c07e4ce661794e71
 }
 
 .footer-content {
@@ -394,6 +400,10 @@ body {
 /******************************************************************/
 /* PÁGINAS ZAPATILLAS */
 
+<<<<<<< HEAD
+=======
+/* Estilos para el catálogo */
+>>>>>>> 2aa5951190e9ccd5587ef8a0c07e4ce661794e71
 .catalogo {
   display: flex;
   flex-direction: column;
@@ -426,6 +436,10 @@ body {
   color: #333;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2aa5951190e9ccd5587ef8a0c07e4ce661794e71
 /******************************************************************/
 /* PÁGINAS SUGERENCIAS */
 .container {
